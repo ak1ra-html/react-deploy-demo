@@ -1,70 +1,191 @@
-# Getting Started with Create React App
+# React Deployment Demo 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project deployment aplikasi React menggunakan GitHub dan Vercel.
 
-## Available Scripts
+## Teknologi yang Digunakan
 
-In the project directory, you can run:
+* React.js
+* GitHub
+* Vercel
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Langkah-Langkah Pengerjaan
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 1. Membuat Project React
 
-### `npm test`
+Buka terminal lalu jalankan:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npx create-react-app react-deploy-demo
+```
 
-### `npm run build`
+Masuk ke folder project:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+cd react-deploy-demo
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 2. Menjalankan React Secara Lokal
 
-### `npm run eject`
+Jalankan project:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Aplikasi akan berjalan di:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```text
+http://localhost:3000
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 3. Mengubah Tampilan React
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Buka file:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+src/App.js
+```
 
-### Code Splitting
+Lalu ubah isi file menjadi:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```jsx
+function App() {
+  return (
+    <div style={{
+      textAlign: 'center',
+      marginTop: '100px',
+      fontFamily: 'Arial'
+    }}>
+      <h1>Deployment React Berhasil 🚀</h1>
+      <p>Aplikasi berhasil dijalankan dan siap deploy.</p>
+    </div>
+  );
+}
 
-### Analyzing the Bundle Size
+export default App;
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Simpan file.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 4. Membuat Repository GitHub
 
-### Advanced Configuration
+1. Login ke GitHub
+2. Klik **New Repository**
+3. Buat repository dengan nama:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```text
+react-deploy-demo
+```
 
-### Deployment
+4. Klik **Create Repository**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 5. Upload Project ke GitHub
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Inisialisasi Git:
+
+```bash
+git init
+```
+
+Tambahkan semua file:
+
+```bash
+git add .
+```
+
+Commit project:
+
+```bash
+git commit -m "first commit"
+```
+
+Hubungkan ke repository GitHub:
+
+```bash
+git remote add origin https://github.com/USERNAME/react-deploy-demo.git
+```
+
+Push project:
+
+```bash
+git branch -M main
+git push -u origin main
+```
+
+---
+
+## 6. Deploy ke Vercel
+
+1. Buka https://vercel.com
+2. Login menggunakan GitHub
+3. Klik **Add New Project**
+4. Pilih repository React
+5. Klik **Deploy**
+
+Tunggu proses deployment selesai.
+
+---
+
+## 7. Hasil Deployment
+
+Setelah berhasil deploy, aplikasi dapat diakses secara online melalui link Vercel.
+
+Contoh:
+
+```text
+https://react-deploy-demo.vercel.app
+```
+
+---
+
+## 8. Testing CI/CD
+
+Ubah isi file `App.js`.
+
+Contoh:
+
+```jsx
+<h1>CI/CD React Berhasil 🔥</h1>
+```
+
+Lalu push kembali ke GitHub:
+
+```bash
+git add .
+git commit -m "update website"
+git push
+```
+
+Vercel akan otomatis melakukan deployment ulang.
+
+---
+
+# Output
+
+## Repository GitHub
+
+```text
+https://github.com/USERNAME/react-deploy-demo
+```
+
+## Deployment Vercel
+
+```text
+https://xxxx.vercel.app
+```
+
+---
+
+# Kesimpulan
+
+Pada praktikum ini berhasil dilakukan deployment aplikasi React.js menggunakan Vercel. Integrasi GitHub dan Vercel memungkinkan proses CI/CD berjalan otomatis setiap kali terjadi push ke repository.
