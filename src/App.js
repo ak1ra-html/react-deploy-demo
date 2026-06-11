@@ -5,7 +5,7 @@ function App() {
       marginTop: '100px',
       fontFamily: 'Arial'
     }}>
-      <h1>Deployment React Berhasil 🚀</h1>
+      <h1>CI/CD React Berhasil 🔥</h1>
       <p>Aplikasi berhasil dijalankan dan siap deploy.</p>
     </div>
   );
