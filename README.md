@@ -167,25 +167,3 @@ git push
 ```
 
 Vercel akan otomatis melakukan deployment ulang.
-
----
-
-# Output
-
-## Repository GitHub
-
-```text
-https://github.com/USERNAME/react-deploy-demo
-```
-
-## Deployment Vercel
-
-```text
-https://xxxx.vercel.app
-```
-
----
-
-# Kesimpulan
-
-Pada praktikum ini berhasil dilakukan deployment aplikasi React.js menggunakan Vercel. Integrasi GitHub dan Vercel memungkinkan proses CI/CD berjalan otomatis setiap kali terjadi push ke repository.
